@@ -1,0 +1,14 @@
+[
+    {
+        "name": "John Doe",
+        "age": 22,
+        "city": "New York",
+        "amount": 1000
+    },
+    {
+        "name": "naveen ",
+        "age": 42,
+        "city": "UK ",
+        "amount": 7000
+    }
+]

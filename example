@@ -1,0 +1,44 @@
+// var express = require('express');
+// const app = express();
+// app.get("/api/sayhello",(reg,res)=>{
+//      res.send("Hello World");
+//      res.end();
+// });
+// app.get("/api/sayhello/:name",(req,res)=>{
+//     res.status(200).json({ name : " naveen ",age :40});
+//     res.end();
+// });
+// app.listen(3000,()=>{
+//     console.log("Server is running on http://localhost:3000");
+// }
+// );
+
+//  const students=[{
+//      name:"Guru",
+//      Age:"19",
+//      Rollno:16
+//  },
+//  {
+//      Name:"Adhi",
+//      Id:"001",
+//      Age:19
+//  }]
+ 
+//  app.get("/api/sayHello",(req,res)=>{
+//      res.send("HELLO")
+//      res.end()
+//  })//define the url
+//  app.get("/api/sayHello1",(req,res)=>{
+//      res.status(200).json(students)
+//  })
+//  app.get("/api/sayHello1/:Id",(req,res)=>{
+//      const{Id}=req.params
+//      const student=student.find((student)=>student.id==Id)
+//      if(student){
+//          res.status(404).json({message:"Student not found"})
+//      }
+//      else{
+//          res.sendStatus(200).json(student);
+//      }
+//      })
+
