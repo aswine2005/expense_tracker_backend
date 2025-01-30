@@ -114,7 +114,27 @@ app.post("/api/expenses", async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 5000;
+
+const startServer = async () => {
+    try {
+        await mongoose.connect("mongodb+srv://aswin:aswin@cluster0.4bgll.mongodb.net/expenses");
+        console.log("Connected to database...");
+        
+        app.listen(PORT, () => {
+            console.log(`Server is running on http://localhost:${PORT}`);
+        }).on('error', (err) => {
+            if (err.code === 'EADDRINUSE') {
+                console.error(`Port ${PORT} is already in use. Please try a different port or close the application using this port.`);
+                process.exit(1);
+            } else {
+                console.error('Server error:', err);
+            }
+        });
+    } catch (error) {
+        console.error("Failed to start server:", error);
+        process.exit(1);
+    }
+};
+
+startServer();
